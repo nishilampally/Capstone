@@ -1,0 +1,15 @@
+#!/bin/bash
+systemctl stop firewalld
+systemctl disable firewalld
+yum -u install wget
+yum update -y
+yum install httpd -y
+chkconfig httpd on
+service httpd start
+yum -y install ntp
+chkconfig ntpd on
+service ntpd start
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+echo "echo never > /sys/kernel/mm/transparent_hugepage/enabled" >> /etc/rc.local
+echo "echo never > /sys/kernel/mm/transparent_hugepage/defrag"  >> /etc/rc.local
+echo "vm.swappiness=10" >> /etc/sysctl.conf
