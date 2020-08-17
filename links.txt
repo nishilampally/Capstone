@@ -1,0 +1,7 @@
+1)Configure Passwordless SSH between the hosts. Refer
+ https://www.itzgeek.com/how-tos/linux/centos-how-tos/ssh-passwordless-login-centos-7-rhel-7.html
+2)Download cloudera Hadoop tarball from below link.
+ http://archive.cloudera.com/cm5/repo-as-tarball/5.10.1/cm5.10.1-centos7.tar.gz
+3)Download cloudera manager installer bin file on the master machine
+http://archive.cloudera.com/cm5/installer/5.10.1/cloudera-manager-installer.bin
+
